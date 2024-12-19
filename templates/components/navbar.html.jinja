@@ -19,6 +19,15 @@
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
+      <form class="d-flex" role="search" action="/browse">
+        <input class="fors-control me-2" name="query" type="search" placeholder="Search" aria-label="Search"> 
+        </form>
+        {% if current_user.is_authrnticated %}
+        hi {{ current_user.username  }}
+        {% else %}
+        <a href="/signin" class="btn btn-outline secondary ms-2">Login</a>
+        {% endif %}
+        
     </div>
   </div>
 </nav>
